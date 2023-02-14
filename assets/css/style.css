@@ -22,7 +22,11 @@ body {
     text-align: center;
   }
   .f1{  
-         width: 10%;
+      width: 10%;
+  }
+  footer{
+    text-align: center;
+    
   }
   .Em{
     font-size: 45px;
