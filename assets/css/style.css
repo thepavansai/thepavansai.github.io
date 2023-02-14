@@ -18,6 +18,9 @@ body {
     font-size: 45px;
 
   }
+  .text{
+    text-align: center; font-size: 35px;
+  }
   .id{  
     text-align: center;
     font-size: 120px;
