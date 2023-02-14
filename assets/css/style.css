@@ -3,35 +3,28 @@ body {
     opacity: 1.3;
     color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
+    text-align: center;
   }
   
   h1 {
   
     font-family: 'Poppins', sans-serif;
-    text-align: center;
-    font-size: 75px;
+    
+    font-size: 100px;
   }
   h2{
     
     font-family: 'Poppins', sans-serif;
-    text-align: left;
-    font-size: 45px;
+    font-size: 60px;
 
-  }
-  .id{  
-    text-align: center;
-    font-size: 120px;
-  }
-  #ud{  
-    text-align: center;
-    font-size: 35px;
   }
   .f1{  
          width: 10%;
   }
-  .f2{
-    width: 10%;
-    image-rendering: auto;
+  .Em{
+    font-size: 45px;
+    text-align: center;
+    color: aliceblue;
+    
   }
-  
  
