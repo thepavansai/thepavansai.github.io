@@ -5,3 +5,6 @@ Removed Dark theme
 Added Navnbar 
 Added New Images And Bg color
 Misc changes
+
+Know Issues
+Responsiveness dead ☠️
