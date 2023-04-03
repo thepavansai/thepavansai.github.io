@@ -8,12 +8,9 @@ body{
     padding: 0;
     background-color: rgb(118, 111, 222);
 }
-.navbar{
-    width: 100%;
-    margin: 0;
-    padding: 0;
    
-}
+   
+
 ul{
     list-style: none;
     margin:0;
@@ -27,9 +24,10 @@ li{
     float: right;
 }
 a{
-    display:block;
+    display:flex;
+    flex-wrap: wrap;
     padding:14px 16px;
-    font-size: 15px;
+    font-size: 1.25vmax;
     text-decoration: none;
     text-align: center;
     color: aliceblue;
@@ -39,47 +37,49 @@ a{
 }
 .container{
     display: flex;
-    align-items: center;
-
-    
+    flex-wrap: wrap;
+   flex-flow: row;    
 }
 .sp1{
-    padding: 150px;
-    font-size: 30px;
-}
+    padding: 10%;
+    font-size: 2.5vmax;
+    width: 45%;
+  }
     
-.span1{
-    font-size: 40px;
+span{
+    font-size: 3.25vmax;
 }
 h2{
-    font-size: 40px;
+    font-size: 3.5vmax;
     font-family: 'Unbounded', cursive;
+    margin: 1.15vmax;
 }
 .abt1{
-    font-size: 25px;
+    font-size: 1.75vmax;
 }
 hr {
     border: none;
     border-top: 2px solid #ccc;
-    margin: 10px 0;
+    margin: 5px 0;
   }
   footer {
    
-    padding: 20px;
+    padding: 1.5%;
   }
   
   .social-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
   
   .social-links a {
-    margin: 0 10px;
+    margin: 1.5% 2.5%;
   }
   .button0 {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 1.5px 20px;
     text-decoration: none;
     border-radius: 5px;
   }
@@ -98,4 +98,5 @@ hr {
   .button:hover {
     background: #ff7f50;
   }
+
   
