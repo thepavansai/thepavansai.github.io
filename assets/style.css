@@ -26,14 +26,13 @@ li{
 a{
     display:flex;
     flex-wrap: wrap;
-    padding: 10px 20px;
-    font-size: 1.20vmax;
+    font-size: 1vmax;
     text-decoration: none;
     text-align: center;
     color: aliceblue;
 }
 .Leftmost{
-  
+  padding: 1.5vmin 20px;
   float: left;
 }
 .container{
@@ -80,7 +79,7 @@ hr {
   }
   .button0 {
     display: inline-block;
-    
+    padding: 1.5vmin 20px;
     text-decoration: none;
     border-radius: 5px;
   }
