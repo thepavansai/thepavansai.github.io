@@ -1,13 +1,13 @@
 html{
     font-family: 'Quicksand', sans-serif;
-  /*  color: aliceblue;*/
-    color: #034078;
+   color: aliceblue;
+  
 }
 
 body{
     margin: 0;
     padding: 0;
-   /*background-color: rgb(118, 111, 222);*/
+   background-color: #034078;
 }
    
    
