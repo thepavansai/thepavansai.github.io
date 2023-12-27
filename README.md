@@ -1,6 +1,6 @@
-# phantompavan.github.io
+# thepavansai.github.io
 Just a Webpage
 
-Rebranded to phantompavan.github.io
+Rebranded to thepavansai.github.io
 
-Previously(thejalsapavan.github.io)
+Previously(phantompavan && thejalsapavan.github.io)
