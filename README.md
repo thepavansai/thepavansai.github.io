@@ -1,5 +1,6 @@
 # thepavansai.github.io
-New Design 
+Just a Webpage
 
-credits:
-Thnx to HTML5UP for template 😊.
+Rebranded to thepavansai.github.io
+
+Previously(phantompavan && thejalsapavan.github.io)
