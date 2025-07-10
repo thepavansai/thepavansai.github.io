@@ -64,32 +64,6 @@
             color: #B4B4B4;
             margin-bottom: 10px;
         }
-
-        .reload-btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 40px;
-            background-color: #333333;
-            color: #fff;
-            font-size: 16px;
-            font-weight: 600;
-            border: none;
-            border-radius: 5px;
-            text-transform: uppercase;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .reload-btn:hover {
-            background-color: #6FCF97;
-            transform: translateY(-3px);
-        }
-
-        .reload-btn:active {
-            transform: translateY(2px);
-        }
-
         .quote {
             font-size: 18px;
             color: #777;
@@ -106,20 +80,21 @@
         <div class="error-code">503</div>
         <div class="error-message">Service Unavailable</div>
         <div class="error-message">Our system is undergoing maintenance. Please try again later.</div>
-        <button class="reload-btn" onclick="window.location.reload();">Try Again</button>
+
         <div class="quote" id="quote"></div>
     </div>
 
-    <script>
-        fetch('https://api.quotable.io/random')
+ <script>
+        fetch('https://thequoteshub.com/api/')
             .then(response => response.json())
             .then(data => {
-                const quoteText = data.content;
-                const quoteAuthor = data.author;
+                const quoteText = data.quote;
+                const quoteAuthor = data.author || "Unknown Author"; 
                 document.getElementById('quote').innerHTML = `"${quoteText}" - ${quoteAuthor}`;
             })
             .catch(error => {
-                document.getElementById('quote').innerHTML = `"Stay positive and keep coding."`;
+                const fallbackQuote = "Coffee is a language in itself. - Jackie Chan";
+                document.getElementById('quote').innerHTML = `"${fallbackQuote}"`;
             });
     </script>
 </body>
