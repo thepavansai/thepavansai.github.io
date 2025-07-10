@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>503 Service Unavailable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #181818;
+            color: #f0f0f0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .error-container {
+            max-width: 450px;
+            width: 100%;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            color: #ff5c57;
+            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .maintenance-icon {
+            font-size: 70px;
+            color: #ff5c57;
+            margin-bottom: 30px;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+
+        .reload-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 40px;
+            background-color: #303030;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .reload-btn:hover {
+            background-color: #ff5c57;
+            transform: translateY(-3px);
+        }
+
+        .reload-btn:active {
+            transform: translateY(2px);
+        }
+
+        .developer-tagline {
+            font-size: 14px;
+            font-weight: 300;
+            color: #bbb;
+            margin-top: 50px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="maintenance-icon">
+            <i class="fas fa-cogs"></i>
+        </div>
+        <div class="error-code">503</div>
+        <div class="error-message">Service Unavailable</div>
+        <div class="error-message">Our system is undergoing maintenance. Please try again later.</div>
+        <button class="reload-btn" onclick="window.location.reload();">Try Again</button>
+        <div class="developer-tagline">
+            <p>Building Better Experiences, One Line of Code at a Time.</p>
+        </div>
+    </div>
+</body>
+</html>
