@@ -41,13 +41,13 @@
             font-weight: 700;
             letter-spacing: 5px;
             margin-bottom: 20px;
-            color: #6FCF97;
+            color: #ffffff;
             text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1);
         }
 
         .maintenance-icon {
             font-size: 70px;
-            color: #6FCF97;
+            color: #ffffff;
             margin-bottom: 30px;
             animation: rotate 2s linear infinite;
         }
@@ -64,7 +64,6 @@
             color: #B4B4B4;
             margin-bottom: 10px;
         }
-        
         .quote {
             font-size: 18px;
             color: #777;
@@ -80,24 +79,21 @@
         </div>
         <div class="error-code">503</div>
         <div class="error-message">Service Unavailable</div>
-        <div class="error-message">Under maintenance. Please try again later.</div>
+        <div class="error-message">Under maintenance.See you soon....</div>
 
-        <div class="quote" id="quote">Loading quote...</div>
+        <div class="quote" id="quote"></div>
     </div>
 
-    <script>
-        fetch('https://api.hamatim.com/quote')
+ <script>
+        fetch('https://api.gameofthronesquotes.xyz/v1/random')
+            .then(response => response.json())
             .then(data => {
-                
-                const quoteText = data?.text || "No quote available.";
-                const quoteAuthor = data?.author || "Unknown Author"; 
-
-             
+                const quoteText=data.sentence || 'Was it loneliness, or space to see clearly ?';
+                const quoteAuthor = data.character.name || "thepavansai"; 
                 document.getElementById('quote').innerHTML = `"${quoteText}" - ${quoteAuthor}`;
             })
             .catch(error => {
-       
-                const fallbackQuote = "Coffee is a language in itself. - Jackie Chan";
+                const fallbackQuote = 'Was it loneliness, or space to see clearly ? - thepavansai.';
                 document.getElementById('quote').innerHTML = `"${fallbackQuote}"`;
             });
     </script>
