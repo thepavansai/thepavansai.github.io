@@ -87,7 +87,6 @@
 
     <script>
         fetch('https://api.hamatim.com/quote')
-            .then(response => response.json())
             .then(data => {
                 
                 const quoteText = data?.text || "No quote available.";
