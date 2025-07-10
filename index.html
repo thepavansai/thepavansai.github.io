@@ -64,6 +64,7 @@
             color: #B4B4B4;
             margin-bottom: 10px;
         }
+        
         .quote {
             font-size: 18px;
             color: #777;
@@ -81,18 +82,22 @@
         <div class="error-message">Service Unavailable</div>
         <div class="error-message">Our system is undergoing maintenance. Please try again later.</div>
 
-        <div class="quote" id="quote"></div>
+        <div class="quote" id="quote">Loading quote...</div>
     </div>
 
- <script>
+    <script>
         fetch('https://thequoteshub.com/api/')
             .then(response => response.json())
             .then(data => {
-                const quoteText = data.quote;
-                const quoteAuthor = data.author || "Unknown Author"; 
+                
+                const quoteText = data?.quote || "No quote available.";
+                const quoteAuthor = data?.author || "Unknown Author"; 
+
+             
                 document.getElementById('quote').innerHTML = `"${quoteText}" - ${quoteAuthor}`;
             })
             .catch(error => {
+       
                 const fallbackQuote = "Coffee is a language in itself. - Jackie Chan";
                 document.getElementById('quote').innerHTML = `"${fallbackQuote}"`;
             });
