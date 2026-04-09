@@ -4,6 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        var preferredHost = "thepavansai.github.io";
+        var loc = window.location;
+        var host = loc.hostname;
+        var shouldCanonicalize = host === preferredHost || host === "www.thepavansai.github.io";
+        if (!shouldCanonicalize) {
+          return;
+        }
+
+        var normalizedPath = loc.pathname === "/index.html" ? "/" : loc.pathname;
+        var needsRedirect =
+          loc.protocol !== "https:" || host !== preferredHost || normalizedPath !== loc.pathname;
+
+        if (needsRedirect) {
+          var target = "https://" + preferredHost + normalizedPath + loc.search + loc.hash;
+          if (target !== loc.href) {
+            window.location.replace(target);
+          }
+        }
+      })();
+    </script>
     <meta
       name="description"
       content="G. Pavan Sai Sriram is a full-stack engineer building scalable web applications, APIs, and cloud-native systems with Java, Go, React, and DevOps tooling."
@@ -22,7 +44,8 @@
     <link rel="shortcut icon" href="./favicon.svg" />
     <link rel="apple-touch-icon" href="./favicon.svg" />
     <link rel="manifest" href="./site.webmanifest" />
-    <link rel="canonical" href="https://thepavansai.github.io" />
+    <link rel="canonical" href="https://thepavansai.github.io/" />
+    <link rel="sitemap" type="application/xml" href="https://thepavansai.github.io/sitemap.xml" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="G. Pavan Sai Sriram Portfolio" />
     <meta property="og:title" content="G. Pavan Sai Sriram | Full-Stack Engineer Portfolio" />
@@ -41,7 +64,9 @@
     />
     <meta name="twitter:image" content="https://thepavansai.github.io/og-image.png" />
     <title>G. Pavan Sai Sriram | Full-Stack Engineer Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

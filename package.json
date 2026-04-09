@@ -8,7 +8,8 @@
     "start": "parcel",
     "build": "parcel build",
     "build-gh": "parcel build --public-url 'https://thepavansai.github.io'",
-    "predeploy": "npm run build-gh",
+    "copy-seo-assets": "mkdir -p dist && cp -f public/robots.txt public/sitemap.xml public/og-image.png dist/",
+    "predeploy": "npm run build-gh && npm run copy-seo-assets",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
