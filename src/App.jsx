@@ -27,6 +27,7 @@ const siteProps = {
   name: "Gara Pavan Sai Sriram",
   title: "Full-Stack Engineer",
   email: "z08qqwf21@mozmail.com",
+  devDotTo: "thepavansai",
   gitHub: "thepavansai",
   instagram: "thepavansai",
   linkedIn: "thepavansai",
