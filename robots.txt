@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thepavansai.github.io/sitemap.xml
