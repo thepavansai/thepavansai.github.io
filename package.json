@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Personal portfolio website",
   "source": "src/index.html",
-  "homepage": "https://thepavansai.github.io",
+  "homepage": "http://thepavansai.github.io/thepavansai.github.io",
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
-    "build-gh": "parcel build --public-url 'https://thepavansai.github.io'",
+    "build-gh": "parcel build --public-url 'http://thepavansai.github.io/thepavansai.github.io'",
     "predeploy": "npm run build-gh",
     "deploy": "gh-pages -d dist"
   },
