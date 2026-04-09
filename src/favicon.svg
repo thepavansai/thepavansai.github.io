@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="P letter icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111315" />
+      <stop offset="1" stop-color="#2a3138" />
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="236" height="236" rx="56" fill="url(#bg)" />
+  <path
+    d="M86 56h55c38 0 61 20 61 52 0 31-23 51-61 51h-23v41H86V56zm32 27v49h21c19 0 31-8 31-24 0-16-12-25-31-25h-21z"
+    fill="#f2f5f8"
+  />
+</svg>
