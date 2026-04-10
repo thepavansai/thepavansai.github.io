@@ -1,4 +1,4 @@
-# G. Pavan Sai Sriram Portfolio
+# G. Pavan Sai Sriram's Portfolio
 
 Personal portfolio website built with React and Parcel.
 
