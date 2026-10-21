@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #FAFAFA;
+    --text: #121212;
+    --muted: #7A7A7A;
+    --border: #E2E2E2;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --surface: #F2F2F2;
+  }
+
+  :root.dark {
+    --bg: #0D0D0D;
+    --text: #F0F0F0;
+    --muted: #888888;
+    --border: #2A2A2A;
+    --nav-bg: rgba(20, 20, 20, 0.95);
+    --surface: #1A1A1A;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+  }
+
+  @media (pointer: fine) {
+    body, a, button, [role="button"] {
+      cursor: none !important;
+    }
+  }
+
+  ::selection {
+    background: var(--text);
+    color: var(--bg);
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+}
+
+/* ─── Metallic Text ─── */
+.metallic-text {
+  background: linear-gradient(180deg, #1A1A1A 0%, #4A4A4A 35%, #8E8E8E 60%, #BDBDBD 85%, #E5E5E5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.dark .metallic-text {
+  background: linear-gradient(180deg, #FFFFFF 0%, #B0B0B0 40%, #666666 80%, #333333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Portrait Mask ─── */
+.portrait-mask {
+  mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+/* ─── Pill Nav ─── */
+.pill-nav {
+  background: var(--nav-bg);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  padding: 4px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ─── Circle Button ─── */
+.circle-btn {
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s, border-color 0.25s;
+  background: transparent;
+  color: var(--text);
+}
+.circle-btn:hover {
+  transform: scale(1.08);
+  background: var(--surface);
+  border-color: var(--text);
+}
+
+/* ─── Nav Pill Link ─── */
+.nav-pill {
+  padding: 6px 16px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.nav-pill:hover, .nav-pill.active {
+  border-color: var(--border);
+  background: var(--surface);
+}
+
+/* ─── Editorial Label ─── */
+.label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ─── Skill / Tag Pill ─── */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  white-space: nowrap;
+  background: transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+.skill-pill:hover {
+  background: var(--surface);
+  border-color: var(--text);
+}
+
+/* ─── Section Divider ─── */
+.section-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+
+/* ─── Logo dot pulse ─── */
+.logo-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text);
+  margin-left: 2px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.logo-dot:hover, a:hover .logo-dot {
+  transform: scale(1.6);
+}
+
+/* ─── Horizontal scroll exp ─── */
+#experience {
+  position: relative;
+  overflow: hidden;
+}
+#exp-stage {
+  display: flex;
+  will-change: transform;
+  transition: transform 0.05s linear;
+}
+.exp-panel {
+  min-width: 85vw;
+  max-width: 85vw;
+  padding: 4rem 5vw;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ─── Available badge ─── */
+.available-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.available-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ─── Float badge ─── */
+.float-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--nav-bg);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+  backdrop-filter: blur(12px);
+}
+
+/* ─── Scroll arrow circle ─── */
+.scroll-circle {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s;
+  text-decoration: none;
+  color: var(--text);
+}
+.scroll-circle:hover {
+  transform: scale(1.08);
+  background: var(--surface);
+  border-color: var(--text);
+}
