@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiSun, FiMoon, FiGithub, FiLinkedin, FiBookOpen, FiMenu, FiX } from 'react-icons/fi'
+import { FiSun, FiMoon, FiGithub, FiLinkedin, FiBookOpen, FiMenu, FiX, FiArrowUpRight } from 'react-icons/fi'
 import { useTheme } from '../context/ThemeContext'
 
 const navLinks = [
@@ -32,12 +32,12 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed top-5 inset-x-0 z-50 flex justify-between items-center px-6 md:px-12 pointer-events-none"
+      className="fixed top-4 sm:top-5 inset-x-0 z-50 flex justify-between items-center px-4 sm:px-6 md:px-12 pointer-events-none"
     >
       {/* Brand Monogram & Wordmark */}
       <a
         href="#"
-        className="flex items-center gap-2.5 pointer-events-auto group select-none"
+        className="flex items-center gap-2 sm:gap-2.5 pointer-events-auto group select-none shrink-0"
         data-cursor-text="HOME"
       >
         <div className="w-8 h-8 rounded-lg bg-[var(--surface)] border border-[var(--border)] flex items-center justify-center group-hover:border-[var(--text)] transition-colors shadow-sm">
@@ -57,7 +57,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex flex-col font-mono leading-none">
-          <span className="text-xs font-bold tracking-[0.2em] text-[var(--text)] uppercase group-hover:metallic-text transition-colors">
+          <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-[var(--text)] uppercase group-hover:metallic-text transition-colors">
             PAVAN SAI
           </span>
           <span className="text-[8px] text-[var(--muted)] tracking-wider uppercase mt-1">
@@ -66,8 +66,8 @@ export default function Navbar() {
         </div>
       </a>
 
-      {/* Center Nav Pill (Desktop) */}
-      <nav className="pill-nav hidden md:flex pointer-events-auto shadow-sm">
+      {/* Center Nav Pill (Desktop Only: hidden on mobile via CSS) */}
+      <nav className="pill-nav pointer-events-auto shadow-sm">
         {navLinks.map(link => (
           <a
             key={link.label}
@@ -81,13 +81,14 @@ export default function Navbar() {
       </nav>
 
       {/* Right Controls */}
-      <div className="flex items-center gap-2 pointer-events-auto">
+      <div className="flex items-center gap-2 pointer-events-auto shrink-0">
         <div className="pill-nav shadow-sm p-1 gap-1">
+          {/* Desktop-only Social Icons */}
           <a
             href="https://github.com/thepavansai"
             target="_blank"
             rel="noopener noreferrer"
-            className="circle-btn w-8 h-8 text-xs"
+            className="circle-btn w-8 h-8 text-xs nav-desktop-social"
             aria-label="GitHub Profile"
             data-cursor-text="GITHUB"
           >
@@ -97,7 +98,7 @@ export default function Navbar() {
             href="https://www.linkedin.com/in/thepavansai"
             target="_blank"
             rel="noopener noreferrer"
-            className="circle-btn w-8 h-8 text-xs"
+            className="circle-btn w-8 h-8 text-xs nav-desktop-social"
             aria-label="LinkedIn Profile"
             data-cursor-text="LINKEDIN"
           >
@@ -107,13 +108,14 @@ export default function Navbar() {
             href="https://medium.com/@thepavansaii"
             target="_blank"
             rel="noopener noreferrer"
-            className="circle-btn w-8 h-8 text-xs"
+            className="circle-btn w-8 h-8 text-xs nav-desktop-social"
             aria-label="Medium Blog"
             data-cursor-text="MEDIUM"
           >
             <FiBookOpen />
           </a>
 
+          {/* Theme Toggle (Visible everywhere) */}
           <button
             onClick={toggle}
             className="circle-btn w-8 h-8 text-xs border-none"
@@ -124,11 +126,11 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile menu hamburger */}
+        {/* Mobile Menu Hamburger Button */}
         <button
           onClick={() => setMenuOpen(o => !o)}
-          className="circle-btn w-9 h-9 md:hidden text-sm"
-          aria-label="Menu"
+          className="circle-btn w-9 h-9 nav-mobile-btn text-sm bg-[var(--surface)] border border-[var(--border)]"
+          aria-label="Open Navigation Menu"
         >
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>
@@ -139,22 +141,68 @@ export default function Navbar() {
         {menuOpen && (
           <motion.div
             key="mobile-drawer"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
-            className="fixed top-20 right-6 bg-[var(--nav-bg)] border border-[var(--border)] rounded-2xl p-4 flex flex-col gap-2 backdrop-blur-xl shadow-2xl pointer-events-auto md:hidden"
+            initial={{ opacity: 0, y: -10, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.98 }}
+            transition={{ duration: 0.2 }}
+            className="fixed top-16 right-4 left-4 sm:left-auto sm:w-80 bg-[var(--nav-bg)] border border-[var(--border)] rounded-2xl p-5 flex flex-col gap-3 backdrop-blur-2xl shadow-2xl pointer-events-auto md:hidden z-50"
           >
-            {navLinks.map(link => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="nav-pill text-left block"
+            <div className="flex justify-between items-center pb-3 border-b border-[var(--border)] font-mono text-[10px] text-[var(--muted)]">
+              <span>NAVIGATION</span>
+              <button
                 onClick={() => setMenuOpen(false)}
+                className="hover:text-[var(--text)] transition-colors"
               >
-                {link.label}
-              </a>
-            ))}
+                CLOSE [✕]
+              </button>
+            </div>
+
+            <div className="flex flex-col gap-1.5 py-1">
+              {navLinks.map(link => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="p-3 rounded-xl hover:bg-[var(--surface)] font-mono text-xs font-bold uppercase tracking-wider text-[var(--text)] transition-colors flex justify-between items-center"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <span>{link.label}</span>
+                  <span className="text-[var(--muted)] text-[10px]">↳</span>
+                </a>
+              ))}
+            </div>
+
+            <div className="pt-3 border-t border-[var(--border)] flex justify-between items-center font-mono text-xs text-[var(--muted)]">
+              <span>SOCIALS</span>
+              <div className="flex gap-2">
+                <a
+                  href="https://github.com/thepavansai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="circle-btn w-8 h-8 text-xs text-[var(--text)]"
+                  aria-label="GitHub"
+                >
+                  <FiGithub />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/thepavansai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="circle-btn w-8 h-8 text-xs text-[var(--text)]"
+                  aria-label="LinkedIn"
+                >
+                  <FiLinkedin />
+                </a>
+                <a
+                  href="https://medium.com/@thepavansaii"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="circle-btn w-8 h-8 text-xs text-[var(--text)]"
+                  aria-label="Medium"
+                >
+                  <FiBookOpen />
+                </a>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -79,11 +79,45 @@
   border: 1px solid var(--border);
   border-radius: 9999px;
   padding: 4px;
-  display: flex;
   gap: 4px;
   align-items: center;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+}
+
+div.pill-nav {
+  display: flex;
+}
+
+/* ─── Responsive Navbar Controls ─── */
+@media (max-width: 767px) {
+  nav.pill-nav {
+    display: none !important;
+  }
+  .nav-mobile-btn {
+    display: inline-flex !important;
+  }
+}
+
+@media (min-width: 768px) {
+  nav.pill-nav {
+    display: flex !important;
+  }
+  .nav-mobile-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .nav-desktop-social {
+    display: none !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .nav-desktop-social {
+    display: inline-flex !important;
+  }
 }
 
 /* ─── Circle Button ─── */
