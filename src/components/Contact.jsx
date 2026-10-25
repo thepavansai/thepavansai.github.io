@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { FiGithub, FiLinkedin, FiTwitter, FiInstagram, FiCopy, FiCheck, FiArrowUpRight, FiClock, FiBookOpen } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiInstagram, FiCopy, FiCheck, FiArrowUpRight, FiClock, FiBookOpen } from 'react-icons/fi'
 import ScrambleText from './ScrambleText'
 
 export default function Contact() {
@@ -35,7 +35,6 @@ export default function Contact() {
     { label: 'GitHub', url: 'https://github.com/thepavansai', icon: FiGithub, handle: '@thepavansai' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/thepavansai', icon: FiLinkedin, handle: 'in/thepavansai' },
     { label: 'Medium', url: 'https://medium.com/@thepavansaii', icon: FiBookOpen, handle: '@thepavansaii' },
-    { label: 'Twitter / X', url: 'https://twitter.com/thepavansaii', icon: FiTwitter, handle: '@thepavansaii' },
     { label: 'Instagram', url: 'https://www.instagram.com/thepavansai', icon: FiInstagram, handle: '@thepavansai' },
   ]
 

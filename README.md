@@ -4,6 +4,10 @@ An editorial, high-contrast monochrome portfolio site engineered for **G. Pavan 
 
 Live at: **[pavansai.is-a.dev](https://pavansai.is-a.dev/)**
 
+<p align="center">
+  <img src="./public/portfolio-preview.png" alt="G. Pavan Sai Sriram Portfolio Preview" width="100%" />
+</p>
+
 ---
 
 ## Overview & Philosophy
