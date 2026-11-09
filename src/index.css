@@ -27,6 +27,9 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
   }
 
   body {
@@ -35,6 +38,8 @@
     font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
   }
 
   @media (pointer: fine) {
@@ -206,24 +211,10 @@ div.pill-nav {
   transform: scale(1.6);
 }
 
-/* ─── Horizontal scroll exp ─── */
+/* ─── Experience Section ─── */
 #experience {
   position: relative;
   overflow: hidden;
-}
-#exp-stage {
-  display: flex;
-  will-change: transform;
-  transition: transform 0.05s linear;
-}
-.exp-panel {
-  min-width: 85vw;
-  max-width: 85vw;
-  padding: 4rem 5vw;
-  border-right: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 /* ─── Available badge ─── */

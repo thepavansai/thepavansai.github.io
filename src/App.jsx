@@ -35,9 +35,9 @@ export default function App() {
       <CustomCursor />
       <GrainOverlay />
       
-      <div className={`transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'} overflow-x-hidden w-full relative`}>
         <Navbar />
-        <main>
+        <main className="overflow-x-hidden w-full">
           <Hero />
           <Marquee items={tickerItems} speed={30} />
           <About />

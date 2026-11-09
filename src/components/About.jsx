@@ -36,7 +36,7 @@ const ease = [0.16, 1, 0.3, 1]
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 md:px-12 max-w-[1440px] mx-auto">
+    <section id="about" className="py-16 sm:py-24 px-4 sm:px-6 md:px-12 max-w-[1440px] mx-auto">
       <hr className="section-rule" />
 
       {/* Grid: 2 Columns */}
@@ -74,7 +74,7 @@ export default function About() {
               href="https://medium.com/@thepavansaii"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 p-3 px-5 rounded-full border border-[var(--border)] hover:border-[var(--text)] transition-colors group"
+              className="inline-flex items-center gap-3 p-3 px-4 sm:px-5 rounded-2xl sm:rounded-full border border-[var(--border)] hover:border-[var(--text)] transition-colors group max-w-full"
               data-cursor-text="READ"
             >
               <FiBookOpen className="text-base" />
@@ -116,7 +116,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1, ease }}
-              className="p-6 bg-[var(--surface)] border border-[var(--border)] rounded-2xl flex flex-col justify-between space-y-6 hover:border-[var(--text)] transition-colors group"
+              className="p-5 sm:p-6 bg-[var(--surface)] border border-[var(--border)] rounded-2xl flex flex-col justify-between space-y-6 hover:border-[var(--text)] transition-colors group"
             >
               <div className="flex justify-between items-start font-mono text-xs text-[var(--muted)]">
                 <span>// DOMAIN_SPEC</span>

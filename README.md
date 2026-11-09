@@ -1,6 +1,6 @@
 # G. Pavan Sai Sriram — Portfolio
 
-An editorial, high-contrast monochrome portfolio site engineered for **G. Pavan Sai Sriram** ([@thepavansai](https://github.com/thepavansai)).
+An editorial, high-contrast monochrome portfolio site engineered for **G. Pavan Sai Sriram** ([@thepavansai](https://github.com/thepavansai)), Full-Stack Software Engineer.
 
 Live at: **[pavansai.is-a.dev](https://pavansai.is-a.dev/)**
 
@@ -64,7 +64,7 @@ portfolio/
 3. **[Ascendant Backend](https://github.com/thepavansai/ascendant-backend)**
    - Distributed microservices platform built for high concurrency.
    - Scalable auth, rate limiting, and structured logging.
-4. **[HealthNest](https://github.com/thepavansai/HealthNest)**
+4. **[HealthNest](https://github.com/thepavansai/HealthNest)** &bull; **[Live Demo](https://health-nest.netlify.app/)**
    - Secure digital healthcare portal with appointment booking and prescription history.
 5. **[MicroCM](https://github.com/thepavansai/microcm)**
    - Minimalist, embeddable configuration management engine.

@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-28 pb-16 px-6 md:px-12 flex flex-col justify-between max-w-[1440px] mx-auto overflow-hidden"
+      className="relative min-h-screen pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 md:px-12 flex flex-col justify-between max-w-[1440px] mx-auto overflow-hidden"
     >
       {/* Editorial Giant Title */}
       <div className="w-full text-center select-none pt-4 md:pt-8 mb-8 md:mb-12">
@@ -89,12 +89,12 @@ export default function Hero() {
         {/* Center Column (6 cols): Replaced stick-figure with live System Topology HUD */}
         <div className="md:col-span-6 relative flex flex-col items-center">
           {/* Floating Pill Badges */}
-          <div className="w-full flex justify-between items-center mb-4 px-2">
-            <span className="float-badge" data-cursor-text="ENGINEER">
+          <div className="w-full flex flex-wrap sm:flex-nowrap justify-center sm:justify-between items-center gap-2 mb-4 px-1">
+            <span className="float-badge text-[9px] sm:text-[10px] px-2.5 sm:px-3.5 py-1 sm:py-1.5" data-cursor-text="ENGINEER">
               <FiTerminal className="text-xs" />
-              FULL-STACK ENGINEER
+              FULL-STACK SOFTWARE ENGINEER
             </span>
-            <span className="float-badge" data-cursor-text="AI CORE">
+            <span className="float-badge text-[9px] sm:text-[10px] px-2.5 sm:px-3.5 py-1 sm:py-1.5" data-cursor-text="AI CORE">
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--text)]" />
               AI INTEGRATIONS
             </span>

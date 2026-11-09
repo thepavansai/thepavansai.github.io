@@ -134,7 +134,7 @@ export default function Skills() {
   }, [])
 
   return (
-    <section id="experience" className="py-24 px-6 md:px-12 max-w-[1440px] mx-auto select-none">
+    <section id="experience" className="py-16 sm:py-24 px-4 sm:px-6 md:px-12 max-w-[1440px] mx-auto select-none">
       <hr className="section-rule" />
 
       {/* Header and Controls */}
@@ -190,11 +190,11 @@ export default function Skills() {
         {experiences.map((exp, i) => (
           <div
             key={i}
-            className="w-[88vw] sm:w-[620px] shrink-0 snap-start p-8 md:p-10 bg-[var(--surface)] border border-[var(--border)] rounded-2xl flex flex-col justify-between hover:border-[var(--text)] transition-all duration-300 group"
+            className="w-[calc(100vw-3.2rem)] max-w-[620px] sm:w-[620px] shrink-0 snap-start p-6 sm:p-8 md:p-10 bg-[var(--surface)] border border-[var(--border)] rounded-2xl flex flex-col justify-start hover:border-[var(--text)] transition-all duration-300 group"
           >
             <div>
               {/* Top Meta */}
-              <div className="flex justify-between items-start gap-4 mb-6">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-start gap-2.5 sm:gap-4 mb-6">
                 <div>
                   <span className="available-badge text-[9px] mb-2 inline-flex">
                     <span className="available-dot" />
@@ -205,13 +205,13 @@ export default function Skills() {
                   </p>
                 </div>
 
-                <span className="metallic-text font-black font-mono text-xl sm:text-2xl tracking-tight text-right whitespace-nowrap">
+                <span className="metallic-text font-black font-mono text-xs sm:text-xl md:text-2xl tracking-tight sm:text-right shrink-0">
                   {exp.period}
                 </span>
               </div>
 
               {/* Role Title */}
-              <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-[var(--text)] mb-6">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-tight text-[var(--text)] mb-6">
                 {exp.role}
               </h3>
 

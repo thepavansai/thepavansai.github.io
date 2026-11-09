@@ -6,10 +6,10 @@ export default function Footer() {
   }
 
   return (
-    <footer className="w-full border-t border-[var(--border)] py-8 px-6 md:px-12 bg-[var(--bg)] select-none">
-      <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
+    <footer className="w-full border-t border-[var(--border)] py-8 px-4 sm:px-6 md:px-12 bg-[var(--bg)] select-none">
+      <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
         {/* Brand */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap justify-center">
           <span className="metallic-text font-black text-sm tracking-wider uppercase">
             PAVAN SAI
           </span>

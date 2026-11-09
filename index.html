@@ -20,6 +20,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data (JSON-LD) for Search Engines & Knowledge Graph -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pavansai.is-a.dev/#person",
+          "name": "G. Pavan Sai Sriram",
+          "alternateName": ["Pavan Sai", "thepavansai"],
+          "jobTitle": "Full-Stack Software Engineer",
+          "url": "https://pavansai.is-a.dev/",
+          "image": "https://pavansai.is-a.dev/portfolio-preview.png",
+          "sameAs": [
+            "https://github.com/thepavansai",
+            "https://www.linkedin.com/in/thepavansai",
+            "https://medium.com/@thepavansaii",
+            "https://www.instagram.com/thepavansai"
+          ],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Insight Global"
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "SASTRA Deemed University"
+          },
+          "knowsAbout": [
+            "Full-Stack Software Engineering",
+            "Distributed Systems Architecture",
+            "Python (FastAPI)",
+            "Java (Spring Boot)",
+            "React & Next.js",
+            "PostgreSQL & MySQL",
+            "Redis Caching",
+            "Docker Containerization",
+            "AST Code Intelligence",
+            "Deterministic AI Routing"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pavansai.is-a.dev/#website",
+          "url": "https://pavansai.is-a.dev/",
+          "name": "G. Pavan Sai Sriram — Portfolio",
+          "description": "High-contrast editorial portfolio of Full-Stack Software Engineer G. Pavan Sai Sriram.",
+          "publisher": {
+            "@id": "https://pavansai.is-a.dev/#person"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

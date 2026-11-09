@@ -39,7 +39,7 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contact" className="pt-14 pb-24 px-6 md:px-12 max-w-[1440px] mx-auto relative">
+    <section id="contact" className="pt-10 sm:pt-14 pb-16 sm:pb-24 px-4 sm:px-6 md:px-12 max-w-[1440px] mx-auto relative">
       <hr className="section-rule" />
 
       {/* Top Metadata Strip */}
